@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Devamithra Raviganesan| Aesthetic Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+
+body{
+    background:whitesmoke;
+    line-height:1.6;
+    scroll-behavior:smooth;
+    color:black;
+}
+
+/* Header */
+header{
+    background-color:lavenderblush;
+    padding:15px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom-left-radius:30px;
+    border-bottom-right-radius:30px;
+}
+
+header h1{
+    color:dimgrey;
+}
+
+nav{
+    display:flex;
+}
+
+nav a{
+    text-decoration:none;
+    color:dimgrey;
+    margin-left:20px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:lightslategrey;
+}
+
+/* Section Titles Gradient */
+h2{
+    margin-bottom:25px;
+    font-size:28px;
+    background: linear-gradient(90deg,hotpink, lightpink, aquamarine);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* Curved Box Style */
+.box{
+    background:azure;
+    padding:30px;
+    margin:auto;
+    max-width:850px;
+    border-radius:35px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.box:hover{
+    transform:translateY(-8px);
+}
+
+/* Highlight Name */
+.highlight-name{
+    background: linear-gradient(90deg,hotpink, lavender);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    font-weight:bold;
+}
+
+/* Skills */
+.skills span{
+    display:inline-block;
+    background:lightcyan;
+    color:slategrey;
+    padding:10px 18px;
+    margin:8px;
+    border-radius:50px;
+    font-weight:600;
+    box-shadow:0 4px 10px rgba(255,105,135,0.3);
+    transition:0.3s;
+}
+
+.skills span:hover{
+    transform:scale(1.1);
+    box-shadow:0 6px 15px rgba(255,105,135,0.5);
+}
+
+/* Projects */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.project{
+    background:lightblue;
+    padding:25px;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.project:hover{
+    transform:scale(1.05);
+}
+
+.project h3{
+    color:hotpink;
+}
+
+/* Contact */
+form{
+    max-width:500px;
+    margin:auto;
+}
+
+input, textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:none;
+    border-radius:20px;
+    background:lavenderblush;
+}
+
+input:focus, textarea:focus{
+    outline:2px solid bisque;
+}
+
+button{
+    background:lightblue;
+    color:grey;
+    border:none;
+    padding:10px 20px;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:600;
+    transition:0.3s;
+}
+
+button:hover{
+    background:cyan;
+}
+
+.contact-info{
+    color:plum;
+    font-weight:600;
+}
+
+/* Footer */
+footer{
+    background:thistle;
+    color:dimgrey;
+    text-align:center;
+    padding:15px;
+    border-top-left-radius:30px;
+    border-top-right-radius:30px;
+}
+
+/* Sections */
+section{
+    padding:60px 20px;
+    text-align:center;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    nav{
+        display:none;
+        flex-direction:column;
+        background:thistle;
+        position:absolute;
+        top:60px;
+        right:0;
+        width:200px;
+        border-radius:20px;
+        padding:10px;
+    }
+
+    nav a{
+        padding:10px;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>My Portfolio</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#Languages">Languages</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Connect</a>
+    </nav>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <div class="box">
+        <p>
+        I am <span class="highlight-name">DEVAMITHRA RAVIGANESAN</span>, an enthusiastic Computer Science Engineering student passionate about web development and creative problem solving. I enjoy building clean and meaningful digital experiences.
+        </p>
+    </div>
+</section>
+
+<section id="Languages">
+    <h2>Languages</h2>
+    <div class="box">
+        Tamil <br><br>
+        English <br><br>
+        Malayalam (Basic)
+    </div>
+</section>
+
+<section id="skills" class="skills">
+    <h2>Skills</h2>
+    <div class="box">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>C Programming</span>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="project">
+            <h3>Portfolio Website</h3>
+            <p>Responsive personal portfolio using HTML & CSS.</p>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <div class="box">
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea rows="4" placeholder="Opinions / Remarks"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <p class="contact-info" style="margin-top:20px;">
+            Email: <a href="mailto:abcdhieru@gmail.com">abcdhieru@gmail.com</a><br>
+            Phone: <a href="9876543210">9876543210</a>
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>Thank you for visiting 🌸</p>
+</footer>
+
+</body>
+</html>
